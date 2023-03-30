@@ -6,23 +6,23 @@ program main
    real:: A(20), z,x
    integer:: i
    real:: f,g
+   
+   A=0 
+   A=[(i, i=1,size(A),1)]   
 
-    A=0 
-    A=[(i, i=1,size(A),1)]   
+   do i=1,size(A)
+   print*, A(i)
+   end do
+   print*,
 
-    do i=1,size(A)
-    print*, A(i)
-    end do
-    print*,
-
-    do i=1,size(A)
+   do i=1,size(A)
         A(i)=g(i,x)
-    end do
+   end do
 
-       do i=1,size(A)
-        z=A(i)
-        print*, f(z)   
-       end do
+   do i=1,size(A)
+     z=A(i)
+      print*, f(z)   
+   end do
 
 end program
 

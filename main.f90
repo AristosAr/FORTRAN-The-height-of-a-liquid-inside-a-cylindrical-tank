@@ -2,10 +2,10 @@
 program main
     implicit none
 
-    real:: r !aktina kilindrou se meters
-    real:: ht !ipsos kilindrikou doxiou
-    real:: h !stathmi igrou
-    real:: volume, vigrou
+    real:: r !cylinder's's radius in meters
+    real:: ht !height of the cylinder
+    real:: h !height of the liquid inside the cylindrical tank
+    real:: volume, vliq
 
     r=1.
     ht=2.*r
@@ -20,14 +20,14 @@ program main
         end if
     end do
 
-    vigrou=volume(r,h)
-    write(*,10) "The volume of the liqud is ", vigrou, " m**3"
+    vliq=volume(r,h)
+    write(*,10) "The volume of the liqud is ", vliq, " m**3"
 
     10 format (a, f4.2, a)
 end program
 
 real function volume(r,h)
-real::r,h  !to r=1 και το h perna apo kyrios programma
+real::r,h  ! r=1 and h going through the main program to the external function and returns the result
 real:: pi=4.*atan(1.)
 
 volume=pi*(r**2)*h/3.

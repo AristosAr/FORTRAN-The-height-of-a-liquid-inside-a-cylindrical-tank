@@ -2,7 +2,7 @@
 program main
     implicit none
 
-    real:: r !cylinder's's radius in meters
+    real:: r !cylinder's radius in meters
     real:: ht !height of the cylinder
     real:: h !height of the liquid inside the cylindrical tank
     real:: volume, vliq
